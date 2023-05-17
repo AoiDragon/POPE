@@ -8,5 +8,5 @@ Our code will coming soon.
 
 ```
 
-![image-20230517233229650](F:\笔记\pic\image-20230517233229650.png)
+![image-20230517233229650](./assets/POPE.png)
 
