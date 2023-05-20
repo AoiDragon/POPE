@@ -2,7 +2,7 @@
 
 This repo provides the source code & data of our paper: Evaluating Object Hallucination in Large Vision-Language Models (Arxiv 2023).
 
-Our code will coming soon.
+Our code will be public soon.
 
 ```
 @InProceedings{Li-hallucination-2023,
