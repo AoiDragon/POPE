@@ -33,7 +33,7 @@ We provide the annotation results of the validation set of COCO 2014 under [./se
 
 #### From automatic segmentation results
 
-If you want to buile POPE with SEEM , you should first organize the annotations in a json file with the following format:
+Besides building POPE with object annotations, our method also supports building POPE on raw images. Leveraing the automatic segmentation tools (e.g. [SEEM](https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once)), we can first extract the objects in the image and then build the POPE as the above method. If you want to buile POPE with SEEM , you should first organize the annotations in a json file with the following format:
 
 ```json
 [{"image": "COCO_val2014_000000131089.jpg"}, {"image": "COCO_val2014_000000393225.jpg"}]
@@ -49,12 +49,21 @@ python main.py
 
 You can customize your POPE by specifying these configs:
 
+- `--auto_seg`: Whether to use automatic segmentation results. Default = False.
+- `--img_path`: The path to the json file that contains the path of images to be segmented.
 - `--seg_path`: The path to the segmentation path that containing ground-truth objects in the image.
+- `--seg_num`: The number of images to be segmented. Default = 1000.
 - `--sample_num`: The number of  negative objects to be sample for each image. Default = 3.
 - `--img_num`: The number of images for building POPE. Default = 500.
 - `--template`: The prompt template. Default = "Is there a {} in the image?".
 - `--dataset`: The dataset name used for the filename of the built POPE. Default = "coco".
 - `--save_path`: The save path of the built POPE. Default = "./output/"
+
+If you want to employ SEEM to segment images, you can build POPE by running:
+
+```python
+python main.py --auto_seg True --img_path ./segmentation/coco_val_images.json --seg_num 1000
+```
 
 After the execution, you will find 5 json files under "./output/{dataset}/":
 
