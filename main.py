@@ -30,8 +30,13 @@ def parse_args():
 
 def main():
     config = parse_args()
-
-    segment_results = [json.loads(q) for q in open(config.seg_path, 'r')]
+    
+    if config.auto_seg:
+        print("Start automatic segmentation...")
+        from seem.seg import segment
+        segment_results = segment(config.img_path, config.seg_num)
+    else:
+        segment_results = [json.loads(q) for q in open(config.seg_path, 'r')]
     processed_segment_results = []
 
     # Sample images which contain more than sample_num objects
@@ -39,7 +44,7 @@ def main():
         if len(image["objects"]) >= config.sample_num:
             processed_segment_results.append(image)
 
-    assert len(processed_segment_results) >= config.img_num, "The number of images that contain more than {} objects is less than {}.".format(sample_num, img_num)
+    assert len(processed_segment_results) >= config.img_num, "The number of images that contain more than {} objects is less than {}.".format(config.sample_num, config.img_num)
     processed_segment_results = random.sample(processed_segment_results, config.img_num)
 
     # Organize the ground truth objects and their co-occurring frequency
