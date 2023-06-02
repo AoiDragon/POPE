@@ -50,7 +50,7 @@ def segment(img_path_file, seg_num):
     
     segment_result_file = open(f'segmentation/{img_path_file.split(".json")[0].split("/")[-1]}_segmentation_result.json', 'w')
     for data in tqdm.tqdm(img_list):
-        image_path = os.path.join('/mnt/duyifan/data/coco/', data['image'])
+        image_path = data['image']
         image = {'image': Image.open(image_path).convert('RGB')}
         result_image, categories = inference(image = image, task = ['Panoptic'])
         if len(set(categories)) <= 3 or data['image'] in img_list:

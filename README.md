@@ -33,7 +33,11 @@ We provide the annotation results of the validation set of COCO 2014 under [./se
 
 #### From automatic segmentation results
 
-To be done.
+If you want to buile POPE with SEEM , you should first organize the annotations in a json file with the following format:
+
+```json
+[{"image": "COCO_val2014_000000131089.jpg"}, {"image": "COCO_val2014_000000393225.jpg"}]
+```
 
 ### Build POPE
 
