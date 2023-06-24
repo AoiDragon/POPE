@@ -46,11 +46,12 @@ def pope(ground_truth_objects, segment_results, sample_num, template, neg_strate
             # Negative sampling (random)
             if neg_strategy == "random":
                 selected_object = random.choice(gt_objects_list)
-                if selected_object not in history_object_list and selected_object not in image["objects"]:
-                    history_object_list.append(selected_object)
-                    question = create_question(question_id, image["image"], selected_object, 'no', template)
-                    question_list.append(question)
-                    question_id += 1
+                while selected_object in history_object_list or selected_object in image["objects"]:
+                    selected_object = random.choice(gt_objects_list)
+                history_object_list.append(selected_object)
+                question = create_question(question_id, image["image"], selected_object, 'no', template)
+                question_list.append(question)
+                question_id += 1
 
             # Negative sampling (popular)
             elif neg_strategy == "popular":
