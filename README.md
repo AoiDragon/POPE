@@ -1,4 +1,4 @@
-## POPE: Polling-based Object Probing Evaluation for Object Hallucination
+# POPE: Polling-based Object Probing Evaluation for Object Hallucination
 
 This repo provides the source code & data of our paper: [Evaluating Object Hallucination in Large Vision-Language Models (Arxiv 2023)](https://arxiv.org/abs/2305.10355).
 
@@ -14,11 +14,16 @@ This repo provides the source code & data of our paper: [Evaluating Object Hallu
 
 <img src="./assets/POPE.png" alt="image-20230517233229650" style="zoom:80%;" />
 
-### Get ground-truth objects
+## Update
+- [6/25] We upload the caption result used in Table 2. You can find them under `./caption_data`.
+- [6/3] We incorporate the code for using POPE with SEEM to handle unannotated datasets.
+- [6/1] We release the code of POPE.
+
+## Collect ground-truth objects
 
 POPE can be easily built based on datasets with annotations about objects in the image. With the help of automatic segmentation tools like SEEM, you can also build POPE on any dataset you want to test.
 
-#### From annotations
+### From annotations
 
 If you want to buile POPE on datasets with object annotations (*e.g.* COCO) , you should first organize the annotations in a json file with the following format:
 
@@ -31,7 +36,7 @@ Here the `image` is the filename of each image and the `objects` is the objects 
 
 We provide the annotation results of the validation set of COCO 2014 under [./segmentation/](./segmentation/coco_ground_truth_segmentation.json). We refer to [LisaAnne/Hallucination](https://github.com/LisaAnne/Hallucination) to collect objects from segmentations and captions.
 
-#### From automatic segmentation results
+### From automatic segmentation results
 
 Besides building POPE with object annotations, our method also supports building POPE on raw images. Leveraing the automatic segmentation tools (e.g. [SEEM](https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once)), we can first extract the objects in the image and then build the POPE as the above method. If you want to buile POPE with SEEM , you should first organize the annotations in a json file with the following format:
 
@@ -39,7 +44,7 @@ Besides building POPE with object annotations, our method also supports building
 [{"image": "COCO_val2014_000000131089.jpg"}, {"image": "COCO_val2014_000000393225.jpg"}]
 ```
 
-### Build POPE
+## Build POPE
 
 Once you have the ground-truth objects prepared, you can build your own POPE by running:
 
@@ -82,7 +87,7 @@ After the execution, you will find 5 json files under "./output/{dataset}/":
 
 - `{dataset}_co_occur.json`: The co-occurrence frequencies of all objects in the selected images.
 
-### Evaluation
+## Evaluation
 
 Now you can use built POPE to evaluate LVLMs and evaluate their object hallucination. The answer of LVLMs should be organized in a json file in the following format:
 
