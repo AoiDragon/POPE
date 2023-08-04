@@ -15,6 +15,7 @@ This repo provides the source code & data of our paper: [Evaluating Object Hallu
 <img src="./assets/POPE.png" alt="image-20230517233229650" style="zoom:80%;" />
 
 ## Update
+- [8/4] We upload the original POPE dataset we used in the paper. You can find them under `./output/coco`.
 - [6/25] We upload the caption result used in Table 2. You can find them under `./caption_data`.
 - [6/3] We incorporate the code for using POPE with SEEM to handle unannotated datasets.
 - [6/1] We release the code of POPE.
@@ -86,6 +87,7 @@ After the execution, you will find 5 json files under "./output/{dataset}/":
 - `{dataset}_ground_truth_objects.json`: The appearance frequencies of all objects in the selected images.
 
 - `{dataset}_co_occur.json`: The co-occurrence frequencies of all objects in the selected images.
+
 
 ## Evaluation
 
