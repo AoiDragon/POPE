@@ -686,7 +686,7 @@
 {"question_id": 686, "image": "COCO_val2014_000000069196.jpg", "text": "Is there a skis in the image?", "label": "no"}
 {"question_id": 687, "image": "COCO_val2014_000000069196.jpg", "text": "Is there a person in the image?", "label": "yes"}
 {"question_id": 688, "image": "COCO_val2014_000000069196.jpg", "text": "Is there a car in the image?", "label": "no"}
-{"question_id": 689, "image": "COCO_val2014_000000069196.jpg", "text": "Is there an airplane in the imange?", "label": "yes"}
+{"question_id": 689, "image": "COCO_val2014_000000069196.jpg", "text": "Is there an airplane in the image?", "label": "yes"}
 {"question_id": 690, "image": "COCO_val2014_000000069196.jpg", "text": "Is there a truck in the image?", "label": "no"}
 {"question_id": 691, "image": "COCO_val2014_000000366141.jpg", "text": "Is there a tv in the image?", "label": "yes"}
 {"question_id": 692, "image": "COCO_val2014_000000366141.jpg", "text": "Is there a person in the image?", "label": "no"}
