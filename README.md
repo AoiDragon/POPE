@@ -15,6 +15,7 @@ This repo provides the source code & data of our paper: [Evaluating Object Hallu
 <img src="./assets/POPE.png" alt="image-20230517233229650" style="zoom:80%;" />
 
 ## Update
+- [10/8] 🎉🎉🎉 Our work is accepted to EMNLP 2023！
 - [6/25] We upload the caption result used in Table 2. You can find them under `./caption_data`.
 - [6/3] We incorporate the code for using POPE with SEEM to handle unannotated datasets.
 - [6/1] We release the code of POPE.
