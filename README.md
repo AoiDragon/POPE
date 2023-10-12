@@ -1,14 +1,14 @@
 # POPE: Polling-based Object Probing Evaluation for Object Hallucination
 
-This repo provides the source code & data of our paper: [Evaluating Object Hallucination in Large Vision-Language Models (Arxiv 2023)](https://arxiv.org/abs/2305.10355).
+This repo provides the source code & data of our paper: [Evaluating Object Hallucination in Large Vision-Language Models (EMNLP 2023)](https://arxiv.org/abs/2305.10355).
 
 ```
-@InProceedings{Li-hallucination-2023,
-  author =  {Yifan Li, Yifan Du, Kun Zhou, Jinpeng Wang, Wayne Xin Zhao and Ji-Rong Wen},
-  title =   {Evaluating Object Hallucination in Large Vision-Language Models},
-  year =    {2023},  
-  journal={arXiv preprint arXiv:2305.10355},
-  url={https://arxiv.org/pdf/2305.10355}
+@inproceedings{Li-hallucination-2023,
+  title={Evaluating Object Hallucination in Large Vision-Language Models},
+  author={Yifan Li, Yifan Du, Kun Zhou, Jinpeng Wang, Wayne Xin Zhao and Ji-Rong Wen},
+  booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing},
+  year={2023},
+  url={https://openreview.net/forum?id=xozJw0kZXF}
 }
 ```
 
